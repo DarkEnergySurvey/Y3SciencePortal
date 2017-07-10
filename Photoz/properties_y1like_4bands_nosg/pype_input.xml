@@ -1,0 +1,60 @@
+<pype>
+  <comment>
+    running again big spec sample to validate in red lss sample with 4 bands and WITH point sources in
+  </comment>
+  <input>
+    <product catalog_name="Coadd Objects 1" class="coadd_objects" display_name="Coadd Objects" process_id="1891" process_path="/process/production/19/d0/000000001891" product_id="6875" product_name="Coadd Objects 1" schema="y3a2_coadd" table="y1a1_coadd_objects" type="objects_catalog" type_name="Objects Catalog" />
+    <product catalog_name="Training Set" class="weighted_training_set" display_name="Training Set" process_id="1989" process_path="/process/production/7e/31/000000001989" product_id="7607" product_name="Training Set 5" schema="training_set_maker" table="training_set_1989" type="training_set" type_name="Training Set" />
+    <parents>
+      <parent display_name="Install Catalogs" process_id="1891" process_path="/process/production/19/d0/000000001891" stage="Data Installation" />
+      <parent display_name="Upload" process_id="96" process_path="/process/production/25/7c/000000000096" stage="Utilities" />
+      <parent display_name="Upload" process_id="97" process_path="/process/production/25/7c/000000000097" stage="Utilities" />
+      <parent display_name="Upload" process_id="102" process_path="/process/production/25/7c/000000000102" stage="Utilities" />
+      <parent display_name="Upload" process_id="103" process_path="/process/production/25/7c/000000000103" stage="Utilities" />
+      <parent display_name="Upload" process_id="113" process_path="/process/production/35/ec/000000000113" stage="Utilities" />
+      <parent display_name="Upload" process_id="199" process_path="/process/production/58/14/000000000199" stage="Utilities" />
+      <parent display_name="Upload" process_id="200" process_path="/process/production/58/14/000000000200" stage="Utilities" />
+      <parent display_name="Upload" process_id="201" process_path="/process/production/58/14/000000000201" stage="Utilities" />
+      <parent display_name="Upload" process_id="203" process_path="/process/production/58/14/000000000203" stage="Utilities" />
+      <parent display_name="Upload" process_id="204" process_path="/process/production/58/14/000000000204" stage="Utilities" />
+      <parent display_name="Upload" process_id="205" process_path="/process/production/58/14/000000000205" stage="Utilities" />
+      <parent display_name="Upload" process_id="206" process_path="/process/production/58/14/000000000206" stage="Utilities" />
+      <parent display_name="Upload" process_id="209" process_path="/process/production/58/14/000000000209" stage="Utilities" />
+      <parent display_name="Upload" process_id="226" process_path="/process/production/ee/d7/000000000226" stage="Utilities" />
+      <parent display_name="Upload" process_id="227" process_path="/process/production/ee/d7/000000000227" stage="Utilities" />
+      <parent display_name="Upload" process_id="228" process_path="/process/production/ee/d7/000000000228" stage="Utilities" />
+      <parent display_name="Upload" process_id="229" process_path="/process/production/ee/d7/000000000229" stage="Utilities" />
+      <parent display_name="Upload" process_id="230" process_path="/process/production/ee/d7/000000000230" stage="Utilities" />
+      <parent display_name="Upload" process_id="231" process_path="/process/production/ee/d7/000000000231" stage="Utilities" />
+      <parent display_name="Upload" process_id="232" process_path="/process/production/ee/d7/000000000232" stage="Utilities" />
+      <parent display_name="Upload" process_id="235" process_path="/process/production/ee/d7/000000000235" stage="Utilities" />
+      <parent display_name="Upload" process_id="236" process_path="/process/production/ee/d7/000000000236" stage="Utilities" />
+      <parent display_name="Upload" process_id="237" process_path="/process/production/ee/d7/000000000237" stage="Utilities" />
+      <parent display_name="Upload" process_id="239" process_path="/process/production/ee/d7/000000000239" stage="Utilities" />
+      <parent display_name="Upload" process_id="241" process_path="/process/production/ee/d7/000000000241" stage="Utilities" />
+      <parent display_name="Upload" process_id="242" process_path="/process/production/ee/d7/000000000242" stage="Utilities" />
+      <parent display_name="Upload" process_id="243" process_path="/process/production/ee/d7/000000000243" stage="Utilities" />
+      <parent display_name="Upload" process_id="245" process_path="/process/production/cb/b5/000000000245" stage="Utilities" />
+      <parent display_name="Upload" process_id="255" process_path="/process/production/d0/9b/000000000255" stage="Utilities" />
+      <parent display_name="Upload" process_id="853" process_path="/process/production/de/81/000000000853" stage="Utilities" />
+      <parent display_name="Upload" process_id="854" process_path="/process/production/87/11/000000000854" stage="Utilities" />
+      <parent display_name="Upload" process_id="855" process_path="/process/production/87/11/000000000855" stage="Utilities" />
+      <parent display_name="Upload" process_id="856" process_path="/process/production/87/11/000000000856" stage="Utilities" />
+      <parent display_name="Upload" process_id="1107" process_path="/process/production/a6/df/000000001107" stage="Utilities" />
+      <parent display_name="Install Catalogs" process_id="1891" process_path="/process/production/19/d0/000000001891" stage="Data Installation" />
+      <parent display_name="Spectroscopic Sample" process_id="1960" process_path="/process/production/21/00/000000001960" stage="Data Preparation" />
+      <parent display_name="Training Set Maker" process_id="1989" process_path="/process/production/7e/31/000000001989" stage="Data Preparation" />
+    </parents>
+  </input>
+  <summary>
+    <field display_name="All Fields" name="Field">
+      Y3A2_COADD
+    </field>
+    <provenance display_name="Y3A2" name="Data Release" release_tag="Y3A2_COADD">
+      v3.1(Y3A2_COADD)
+    </provenance>
+    <stage>
+      Data Preparation
+    </stage>
+  <type name="Apply weights">yes</type><type name="Apply zeropoint corrections">xcorr_sfd correction from coadd DB applied</type><type name="Extinction map used">SFD98</type><type name="Trained code: ">DNF</type><type name="Number of bands used: ">4</type><type name="Algorithm" /><type name="DNF">Yes</type></summary>
+</pype>

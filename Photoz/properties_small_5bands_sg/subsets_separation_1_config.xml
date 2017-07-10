@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <section id="Data Selection">
+    <subsection id="Inputs">
+      <scalar description="" type="int" name="Number of observables (4 excludes Y band)" value="5" id="n_inputs"/>
+    </subsection>
+    <subsection id="Publication">
+      <scalar description="" type="string" name="Publish catalog?" value="0" id="publish"/>
+    </subsection>
+    <subsection id="Redshift Range">
+      <scalar description="" type="string" name="Minimum redshift" value="0.0" id="z_min"/>
+      <scalar description="" type="string" name="Maximum redshift" value="2.0" id="z_max"/>
+    </subsection>
+    <subsection id="Subsets Size">
+      <scalar description="" type="string" name="Training Subset: fraction of data used for training (if 1.0, no validation is performed)" value="0.6" id="train_fraction"/>
+    </subsection>
+    <subsection id="Photometry type to apply cuts">
+      <scalar description="" type="string" name="Type of magnitude to consider in cuts below:" value="auto" id="photo_type_cuts"/>
+      <scalar description="" type="string" name="Make Photometric sample LSS red type?" value="1" id="photo_type_gold"/>
+      <scalar description="" type="string" name="Prune training/validation?" value="0" id="prune_train"/>
+    </subsection>
+    <subsection id="Signal-to-noise">
+      <scalar description="" type="string" name="S/N cut in g-band" value="None" id="sn_cut_g"/>
+      <scalar description="" type="string" name="S/N cut in r-band" value="None" id="sn_cut_r"/>
+      <scalar description="" type="string" name="S/N cut in i-band" value="None" id="sn_cut_i"/>
+      <scalar description="" type="string" name="S/N cut in z-band" value="None" id="sn_cut_z"/>
+      <scalar description="" type="string" name="S/N cut in Y-band" value="None" id="sn_cut_Y"/>
+    </subsection>
+    <subsection id="Magnitude">
+      <scalar description="" type="string" name="Maximum magnitude in g-band" value="None" id="mag_g_max"/>
+      <scalar description="" type="string" name="Maximum magnitude in r-band" value="None" id="mag_r_max"/>
+      <scalar description="" type="string" name="Maximum magnitude in i-band" value="22.5" id="mag_i_max"/>
+      <scalar description="" type="string" name="Maximum magnitude in z-band" value="None" id="mag_z_max"/>
+      <scalar description="" type="string" name="Maximum magnitude in Y-band" value="None" id="mag_Y_max"/>
+    </subsection>
+    <subsection id="Colors">
+      <scalar description="" type="string" name="Minimum g-r" value="-1.0" id="gr_min"/>
+      <scalar description="" type="string" name="Maximum g-r" value="3." id="gr_max"/>
+      <scalar description="" type="string" name="Minimum r-i" value="-1." id="ri_min"/>
+      <scalar description="" type="string" name="Maximum r-i" value="2.5" id="ri_max"/>
+      <scalar description="" type="string" name="Minimum i-z" value="-1." id="iz_min"/>
+      <scalar description="" type="string" name="Maximum i-z" value="2." id="iz_max"/>
+      <scalar description="" type="string" name="Minimum z-Y" value="None" id="zY_min"/>
+      <scalar description="" type="string" name="Maximum z-Y" value="None" id="zY_max"/>
+    </subsection>
+  </section>
+  <section id="Weights">
+    <subsection id="Weighting method">
+      <scalar description="" type="string" name="Apply weights on training set to mimic the photometric set?" value="yes" id="apply_weights"/>
+      <scalar description="" type="string" name="Apply weights only on validation?" value="1" id="weights_valid_only"/>
+      <scalar description="" type="string" name="Virtual training set size for repeating objects (times the original)" value="10.0" id="w_size"/>
+      <scalar description="" type="string" name="Final weighted training set size, after randomly sampling in virtual set (times the original)" value="1.0" id="final_size"/>
+    </subsection>
+    <subsection id="Weights Code">
+      <scalar description="" type="string" name="Observables" value="colors2" id="obs_type"/>
+      <scalar description="" type="string" name="Number of Nearest Neighbors" value="5" id="NNEI_weights"/>
+      <scalar description="" type="string" name="Type of magnitude used" value="auto" id="photo_type_weights"/>
+    </subsection>
+  </section>
+</config>
