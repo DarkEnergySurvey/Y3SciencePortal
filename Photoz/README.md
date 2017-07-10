@@ -1,3 +1,5 @@
+#PHOTO-Z
+
 In this directory you will find products associated to Photoz Y3.
 
 We have been validating with 2 different spectroscopic sample (We have created a basic point source removal to eliminate point sources from these catalogs (nopointsources)):
