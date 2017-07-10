@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <section id="Algorithm selection">
+    <subsection id="Photo-z algorithms available">
+      <checkbox description="" type="photoz_code" name="DNF" value="DNF" id="DNF"/>
+    </subsection>
+    <subsection id="Create DES output products?">
+      <scalar description="" type="string" name="Save validation output as DES standard" value="no" id="des_format"/>
+    </subsection>
+  </section>
+  <section id="ANNz">
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_annz"/>
+    </subsection>
+    <subsection id="Network Architecture">
+      <scalar description="" type="string" name="Number of hidden layers; nodes in each layer" value="4 10 10 10 10" id="arch_list"/>
+    </subsection>
+    <subsection id="Training Procedure">
+      <scalar description="" type="string" name="Training Subset Size: fraction of training set used for training (the rest is used for validation)" value="0.9" id="train_size"/>
+      <scalar description="" type="string" name="Maximum number of iteractions" value="1000" id="n_iter"/>
+      <scalar description="" type="string" name="Number of .wts files (different seeds)" value="3" id="n_wts"/>
+    </subsection>
+  </section>
+  <section id="ANNz2">
+    <subsection id="Basic configuration">
+      <scalar description="" type="string" name="Which mode to run ANNz2 training?" value="ranreg" id="type_annz2"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_annz2"/>
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_annz2"/>
+      <scalar description="" type="string" name="Type of observable used" value="magnitudes" id="obs_type_annz2"/>
+      <scalar description="" type="string" name="The number of random MLMs to generate - for single regression, this must be [1], otherwise 10 is recommended" value="15" id="nMLMs"/>
+      <scalar description="" type="string" name="set the number of near-neighbours used to compute the KNN error estimator" value="100" id="nErrKNN"/>
+      <scalar description="" type="string" name="generate these randomized MLM types" value="ANN_BDT" id="rndOptTypes"/>
+    </subsection>
+  </section>
+  <section id="ArborZ">
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_arborz"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_arborz"/>
+      <scalar description="" type="string" name="Type of observable used" value="magnitudes" id="obs_type_arborz"/>
+    </subsection>
+    <subsection id="Training Procedure">
+      <scalar description="" type="string" name="Binning options" value="fixed" id="BINNING_METHOD"/>
+      <scalar description="" type="string" name="Number of bins (if binning is 'fixed' or 'variable')" value="32" id="NUM_BINS"/>
+      <scalar description="" type="string" name="Highest redshift bin edge (z_max means the highest redshift in training set. To choose another value, replace it typing a float)" value="z_max" id="MAX_REDSHIFT"/>
+      <scalar name="Write binning data to a file?" value="yes" hidden="hidden" type="string" id="WRITE_BIN" description=""/>
+      <scalar description="" type="string" name="Expected photo-z resolution" value="0.05" id="RESOLUTION"/>
+    </subsection>
+  </section>
+  <section id="BPZ">
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_bpz"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_bpz"/>
+    </subsection>
+    <subsection id="BPZ configuration">
+      <scalar description="" type="string" name="Template list" value="CWWSB4.list" id="SPECTRA"/>
+      <scalar description="" type="string" name="prior name" value="hdfn_gen" id="PRIOR"/>
+      <scalar description="" type="string" name="redshift resolution" value="0.01" id="DZ"/>
+      <scalar description="" type="string" name="minimum redshift" value="0.00" id="ZMIN"/>
+      <scalar description="" type="string" name="maximum redshift" value="2.0" id="ZMAX"/>
+      <scalar description="" type="string" name="Number of interpolated templates between each of original ones" value="0" id="INTERP"/>
+      <scalar description="" type="string" name="Filters to be excluded from estimation" value="20130322_y.res" id="EXCLUDE"/>
+    </subsection>
+  </section>
+  <section id="DNF">
+    <subsection id="Run">
+      <scalar description="" type="string" name="Which type of algorithm?" value="DNF" id="dnf_type"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_dnf"/>
+    </subsection>
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_dnf"/>
+    </subsection>
+    <subsection id="PDF binning">
+      <scalar description="" type="string" name="Start" value="0.0" id="pdf_start"/>
+      <scalar description="" type="string" name="Stop" value="2.0" id="pdf_stop"/>
+      <scalar description="" type="string" name="Step" value="0.05" id="pdf_step"/>
+    </subsection>
+  </section>
+  <section id="LePhare">
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_lephare"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_lephare"/>
+    </subsection>
+    <subsection id="GALAXY LIBRARY">
+      <scalar description="" type="string" name="Set of SEDs used (details in: Documentation/Description)" value="CFHTLS_MOD31.list" id="GAL_SED"/>
+    </subsection>
+    <subsection id="THEORETICAL MAGNITUDES">
+      <scalar description="" type="string" name="Redshift: step, maximum, new step if maximum gt 6" value="0.02,2.0,0.1" id="Z_STEP"/>
+      <scalar description="" type="string" name="H0, density parameters: matter and lambda" value="67.8,0.308,0.692" id="COSMOLOGY"/>
+      <scalar description="" type="string" name="Range for extinction (details in: Documentation/Description)" value="15,21" id="MOD_EXTINC"/>
+      <scalar description="" type="string" name="Extinction law" value="calzetti.dat" id="EXTINC_LAW"/>
+      <scalar description="" type="string" name="E(B-V) list" value="0.0,0.1,0.2,0.3" id="EB_V"/>
+      <scalar description="" type="string" name="Emission Lines" value="NO" id="EM_LINES"/>
+    </subsection>
+    <subsection id="PHOTOMETRIC REDSHIFTS">
+      <scalar description="" type="string" name="I band for prior on N(z)" value="3,1,3" id="NZ_PRIOR"/>
+      <scalar name="Error Scale (4 numbers for griz)" value="" hidden="hidden" type="string" id="ERR_SCALE" description=""/>
+      <scalar name="Error scaling factor" value="1.5" hidden="hidden" type="float" id="ERR_FACTOR" description=""/>
+    </subsection>
+  </section>
+  <section id="MLZ">
+    <subsection id="Photometry">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_mlz"/>
+      <scalar description="" type="string" name="Observables" value="mags_and_colors" id="obs_type_mlz"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_mlz"/>
+    </subsection>
+    <subsection id="General configurations inside MLZ">
+      <scalar description="" type="string" name="CheckOnly (check everything with small samples)" value="no" id="CheckOnly"/>
+      <scalar description="" type="string" name="PredictionMode (TPZ/SOM/TPZ_C)" value="TPZ" id="PredictionMode"/>
+      <scalar description="" type="string" name="PredictionClass (Reg/Class for regression or classification) " value="Reg" id="PredictionClass"/>
+      <scalar description="" type="string" name="NzBins (number of bins in z range)" value="80" id="NzBins"/>
+      <scalar description="" type="string" name="NRandom (number of random realizations)" value="10" id="NRandom"/>
+      <scalar description="" type="string" name="NTrees (number of trees or maps - total number is NRandom x NTrees)" value="20" id="NTrees"/>
+      <scalar description="" type="string" name="Natt (number of attributes m* fot TPZ or subsample for SOM)" value="3" id="Natt"/>
+      <scalar description="" type="string" name="OobError (out-of-bag error? yes/no)" value="no" id="OobError"/>
+      <scalar description="" type="string" name="VarImportance (perform variable importance ranking? yes/no) " value="no" id="VarImportance"/>
+    </subsection>
+    <subsection id="Advanced TPZ configurations">
+      <scalar description="" type="string" name="MinLeaf (minimum number for terminal leaf)" value="5" id="MinLeaf"/>
+      <scalar description="" type="string" name="ImpurityIndex (options: entropy/gini/classE for classification) " value="entropy" id="ImpurityIndex"/>
+    </subsection>
+    <subsection id="Advanced SOM configurations">
+      <scalar description="" type="string" name="Topology (grid/hex/sphere)" value="hex" id="Topology"/>
+      <scalar description="" type="string" name="Periodic? (yes/no)" value="yes" id="Periodic"/>
+      <scalar description="" type="string" name="Ntop (map size)" value="15" id="Ntop"/>
+      <scalar description="" type="string" name="Iterations" value="200" id="Iterations"/>
+      <scalar description="" type="string" name="SomType (online/batch)" value="online" id="SomType"/>
+      <scalar description="" type="string" name="AlphaStart" value="0.9" id="AlphaStart"/>
+      <scalar description="" type="string" name="AlphaEnd" value="0.5" id="AlphaEnd"/>
+      <scalar description="" type="string" name="ImportanceFile (path to importance file, none if not used)" value="none" id="ImportanceFile"/>
+    </subsection>
+    <subsection id="Advanced Get PDFs configurations">
+      <scalar description="" type="string" name="SigmaFactor (gaussian smoothing with kernel Sigma1*Resolution)" value="3." id="SigmaFactor"/>
+      <scalar description="" type="string" name="RmsFactor (initial rms, can be modified using oob data)" value="0.02" id="RmsFactor"/>
+      <scalar description="" type="string" name="WriteFits? (yes: PDF file in fits format, no: numpy format)" value="no" id="WriteFits"/>
+      <scalar description="" type="string" name="MultipleFiles (Write a PDFs file per core instead of merging them (faster))" value="no" id="MultipleFiles"/>
+    </subsection>
+    <subsection id="Advanced SPARSE REPRESENTATION configurations">
+      <scalar description="" type="string" name="SparseRep (Sparse representation, it creates a fits file)" value="no" id="SparseRep"/>
+      <scalar description="" type="string" name="SparseDims (Nmu, Nsigma, Nv - To create dictionary)" value="200,50,2" id="SparseDims"/>
+      <scalar description="" type="string" name="NumberCoef (Integers to represent the coefficients)" value="32001" id="NumberCoef"/>
+      <scalar description="" type="string" name="NumberBases (Number of fixed bases to use)" value="20" id="NumberBases"/>
+      <scalar description="" type="string" name="OriginalPdfFile (Write the original PDFs also? yes/no)" value="yes" id="OriginalPdfFile"/>
+    </subsection>
+  </section>
+  <section id="Pofz">
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_pofz"/>
+      <scalar description="" type="string" name="Save validation pdfs?" value="no" id="pdf_pofz"/>
+    </subsection>
+    <subsection id="Pofz parameters">
+      <scalar description="" type="string" name="Number of Nearest Neighbors" value="5" id="NNEI_weights"/>
+      <scalar description="" type="string" name="Observables" value="magnitudes" id="obs_type_pofz"/>
+    </subsection>
+  </section>
+  <section id="SkyNet">
+    <subsection id="Network Architecture">
+      <scalar description="" type="string" name="Number of hidden layers; nodes in each hidden layer" value="10 20 20" id="arch_list_skynet"/>
+      <scalar description="" type="string" name="Which type of network?" value="regression" id="skynet_type"/>
+      <scalar description="" type="string" name="Number of mpi nodes; zero means run in serial" value="1" id="mpi_skynet"/>
+    </subsection>
+    <subsection id="Photometry type">
+      <scalar description="" type="string" name="Type of magnitude (observed data)" value="auto" id="photo_type_skynet"/>
+      <scalar description="" type="string" name="Observables" value="magnitudes" id="obs_type_skynet"/>
+    </subsection>
+    <subsection id="If classification type">
+      <scalar description="" type="float" name="Minimum redshift for pdf" value="0.0" id="min_pdf_skynet"/>
+      <scalar description="" type="float" name="Maximum redshift for pdf" value="2.0" id="max_pdf_skynet"/>
+      <scalar description="" type="int" name="Number of bins in the pdf" value="40" id="nbins_pdf_skynet"/>
+    </subsection>
+  </section>
+</config>

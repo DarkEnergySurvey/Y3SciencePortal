@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <section id="Photo-z Validation">
+    <subsection id="ANNz">
+      <scalar description="" type="string" name="ANNz validation has no configuration" value="No configuration" id="info1"/>
+    </subsection>
+    <subsection id="ANNz2">
+      <scalar description="" type="string" name="ANNz2 validation has no configuration" value="No configuration" id="info2"/>
+    </subsection>
+    <subsection id="ArborZ">
+      <scalar description="" type="" name="ArborZ validation has no configuration" value="No configuration" id="info3"/>
+      <scalar name="Save pdf distribution for each galaxy?" value="yes" hidden="hidden" type="string" id="write_pdf" description=""/>
+    </subsection>
+    <subsection id="BPZ">
+      <scalar description="" type="string" name="Correct for zeropoint offsets obtained from training?" value="yes" id="corr_zp_off"/>
+    </subsection>
+    <subsection id="DNF">
+      <scalar description="" type="string" name="DNF validation has no configuration" value="No configuration" id="info4"/>
+    </subsection>
+    <subsection id="LePhare">
+      <scalar description="" type="string" name="Save pdf distribution for each galaxy?" value="yes" id="write_pdf_lephare"/>
+      <scalar description="" type="" name="(Info: Everything else is the same configuration as training procedure.)" value="No configuration" id="info5"/>
+    </subsection>
+    <subsection id="MLZ">
+      <scalar description="" type="string" name="Same configs of training." value="No configuration" id="info6"/>
+    </subsection>
+    <subsection id="Pofz">
+      <scalar description="" type="string" name="Number of Nearest Neighbors" value="5" id="NNEI_pofz"/>
+      <scalar description="" type="string" name="Number of bins used to generate p(z) histograms" value="100" id="GRID"/>
+      <scalar description="" type="string" name="Smoothing to be performed" value="100" id="RES"/>
+      <scalar description="" type="string" name="Minimum redshift of p(z)" value="0.0" id="zmin_pofz"/>
+      <scalar description="" type="string" name="Maximum redshift of p(z)" value="1.5" id="zmax_pofz"/>
+      <scalar description="" type="string" name="Value used as photo-z" value="mean" id="photoz_value"/>
+    </subsection>
+    <subsection id="SkyNet">
+      <scalar description="" type="string" name="Skynet validation has no configuration." value="No configuration" id="info7"/>
+    </subsection>
+  </section>
+  <section id="Later Corrections">
+    <subsection id="Bias correction">
+      <scalar description="" type="string" name="Apply corrections to each photo-z bin based on bias?" value="no" id="bias_correction"/>
+      <scalar description="" type="float" name="Photo-z bin size:" value="0.10" id="bias_corr_bin"/>
+      <scalar description="" type="int" name="Degree of the adjust polynomial:" value="5" id="bias_poly_deg"/>
+      <scalar description="" type="string" name="Remove objects with large bias?" value="no" id="outlier_cut"/>
+      <scalar description="" type="float" name="If yes, remove objects with bias larger than:" value="0.2" id="dz_max"/>
+    </subsection>
+    <subsection id="Cut objects based on photo-z">
+      <scalar description="" type="string" name="Cut objects with worst photo-z results?" value="no" id="bad_photoz_cut"/>
+      <scalar description="" type="float" name="Fraction of sample to remove:" value="0.1" id="percent_cut"/>
+    </subsection>
+  </section>
+</config>

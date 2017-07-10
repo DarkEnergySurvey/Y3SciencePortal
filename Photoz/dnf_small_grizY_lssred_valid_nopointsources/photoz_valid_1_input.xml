@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+  <file mimetype="text/xml" optional="" value="pype_input.xml" class="pype_input" source="scienceportal" type="" id=""/>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._valid_subset.fits" id="" source="subsets_separation" type="" class="validation_subset"/>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._weighted_valid_subset.fits" id="" source="subsets_separation" type="" class="weighted_validation_subset"/>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._photo_subset.fits" id="" source="subsets_separation" type="" class="photometric_subset"/>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._tsm_valid_match.fits" id="" source="subsets_separation" type="" class="tsm_valid"/>
+  <config mimetype="" name="observable type" type="string" section="Sample Selction" value="colors2" id="obs_type" source="subsets_separation" optional="True" class="" indent_level="observable type"/>
+  <config mimetype="" name="spec-z maximum" type="string" section="Sample Selection" value="2.0" id="z_max" source="subsets_separation" optional="True" class="" indent_level="spec-z maximum"/>
+  <config mimetype="" name="spec-z minimum" type="string" section="Sample Selection" value="0.0" id="z_min" source="subsets_separation" optional="True" class="" indent_level="spec-z minimum"/>
+  <config mimetype="" name="Number of bands" type="string" section="Sample Selection" value="5" id="n_inputs" source="subsets_separation" optional="True" class="" indent_level="Number of bands"/>
+  <file mimetype="text/table" optional="True" value="photoz_train_1_._dnf_train_file.txt" id="" source="photoz_train" type="" class="dnf_training"/>
+  <file mimetype="application/x-tar" optional="True" value="photoz_train_1_._training_files.tar" id="" source="photoz_train" type="" class="training"/>
+  <config mimetype="" name="" type="string" section="" value="DNF" id="DNF" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="des_format" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_annz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_annz2" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_arborz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_lephare" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_pofz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_mlz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_skynet" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_dnf" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="auto" id="photo_type_bpz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="dnf type of algorithm" type="string" section="" value="DNF" id="dnf_type" source="photoz_train" optional="True" class="" indent_level="dnf type of algorithm"/>
+  <config mimetype="" name="pdf start" type="string" section="" value="0.0" id="pdf_start" source="photoz_train" optional="True" class="" indent_level="pdf start"/>
+  <config mimetype="" name="pdf stop" type="string" section="" value="2.0" id="pdf_stop" source="photoz_train" optional="True" class="" indent_level="pdf stop"/>
+  <config mimetype="" name="pdf step" type="string" section="" value="0.05" id="pdf_step" source="photoz_train" optional="True" class="" indent_level="pdf step"/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_annz2" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_arborz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_dnf" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_mlz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_pofz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_dnf" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_lephare" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="" type="string" section="" value="no" id="pdf_bpz" source="photoz_train" optional="True" class="" indent_level=""/>
+  <config mimetype="" name="Apply weights?" type="string" section="Configuration" value="yes" id="apply_weights" source="subsets_separation" hid="1" optional="True" class="" indent_level="0"/>
+  <config mimetype="" name="apply weights" type="string" section="Weights" value="yes" id="apply_weights" source="subsets_separation" hid="1" optional="True" class="" indent_level="0"/>
+</input>

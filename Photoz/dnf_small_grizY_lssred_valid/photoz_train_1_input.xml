@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._train_subset.fits" id="" source="subsets_separation" type="" class="training_subset"/>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._weighted_train_subset.fits" id="" source="subsets_separation" type="" class="weighted_training_subset"/>
+  <file mimetype="application/fits-table" optional="True" value="subsets_separation_1_._photo_subset.fits" id="" source="subsets_separation" type="" class="photometric_subset"/>
+  <config mimetype="" indent_level="" type="string" section="" value="Y3A2_COADD" id="release_tag" source="subsets_separation" optional="True" class="" name=""/>
+  <config mimetype="" indent_level="" type="string" section="" value="y3a2_coadd" id="field_tag" source="subsets_separation" optional="True" class="" name=""/>
+  <config mimetype="" indent_level="observable type" type="string" section="Sample Selction" value="colors2" id="obs_type" source="subsets_separation" optional="True" class="" name="observable type"/>
+  <config mimetype="" indent_level="spec-z minimum" type="string" section="Sample Selection" value="0.0" id="z_min" source="subsets_separation" optional="True" class="" name="spec-z minimum"/>
+  <config mimetype="" indent_level="spec-z maximum" type="string" section="Sample Selection" value="2.0" id="z_max" source="subsets_separation" optional="True" class="" name="spec-z maximum"/>
+  <config mimetype="" indent_level="number of nearest neighbors for weights" type="string" section="Weights" value="5" id="NNEI_weights" source="subsets_separation" optional="True" class="" name="number of nearest neighbors for weights"/>
+  <config mimetype="" indent_level="Number of bands" type="string" section="Sample Selection" value="5" id="n_inputs" source="subsets_separation" optional="True" class="" name="Number of bands"/>
+  <config mimetype="" indent_level="Apply weights only in validation?" type="string" section="Configuration" value="1" id="weights_valid_only" source="subsets_separation" optional="True" class="" name="Apply weights only in validation?"/>
+  <config mimetype="" indent_level="0" type="string" section="Configuration" value="yes" id="apply_weights" source="subsets_separation" hid="1" optional="True" class="" name="Apply weights?"/>
+  <config mimetype="" indent_level="0" type="string" section="Weights" value="yes" id="apply_weights" source="subsets_separation" hid="1" optional="True" class="" name="apply weights"/>
+</input>
